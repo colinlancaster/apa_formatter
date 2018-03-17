@@ -8,30 +8,74 @@
   <body>
     <div class="container">
       <h1>This completely free APA formatter.</h1>
-      <form>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+      <form onsubmit="main(); return false;" id="mainForm">
+        <div class="form-row">
+
+          <div class="form-group col-md-5">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Ex. James">
+          </div>
+
+          <div class="form-group col-md-2">
+              <label for="middleInitial">Middle Initial</label>
+              <input type="text" class="form-control" id="middleInitial" placeholder="P.">
+            </div>
+
+          <div class="form-group col-md-5">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Sullivan">
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="">Article Name</label>
+            <input type="text" name="articleName" id="articleName" class="form-control" placeholder="Top 10 Blog Posts From 2018">
+          </div>
         </div>
 
-        <!-- <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text"> -->
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="publisherName">Publisher Name</label>
+            <input type="text" class="form-control" name="" id="publisherName" placeholder="Bob's Content Shop">
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="url">Website URL</label>
+            <input type="text" class="form-control" name="url" id="url" placeholder=" https://www.yourmom.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-4">
+              <label for="publisherCity">Publisher City</label>
+              <input type="text" class="form-control" name="publisherCity" id="publisherCity" placeholder="New York City">
+          </div>
+  
+          <div class="form-group col-md-4">
+            <label for="publisherState">Publisher State</label>
+            <input type="text" class="form-control" name="publisherState" id="publisherState" placeholder="NY">
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="publisherYear">Publisher Year</label>
+            <input type="text" class="form-control" name="publisherYear" id="publisherYear" placeholder="1973">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="datePublished">Date Published (or accessed)</label>
+            <input type="date" class="form-control" name="datePublished" id="datePublished" placeholder="Pick a date">
+          </div>
+        </div>
+
+        <button type="submit" value="submit" class="btn btn-info">Make It Rain</button>
       </form>
+      <br>
+      <div id="completeCitation">
+      </div>
       <script src="app.js"></script>
     </div>
     
