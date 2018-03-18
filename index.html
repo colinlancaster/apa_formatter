@@ -3,6 +3,11 @@
   <head>
     <title>Free APA Formatter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      .sectionTwo {
+        font-style: italic;
+      }
+    </style>
   </head>
 
   <body>
@@ -52,7 +57,7 @@
               <label for="publisherCity">Publisher City</label>
               <input type="text" class="form-control" name="publisherCity" id="publisherCity" placeholder="New York City">
           </div>
-  
+
           <div class="form-group col-md-4">
             <label for="publisherState">Publisher State</label>
             <input type="text" class="form-control" name="publisherState" id="publisherState" placeholder="NY">
@@ -63,7 +68,7 @@
             <input type="text" class="form-control" name="publisherYear" id="publisherYear" placeholder="1973">
           </div>
         </div>
-        
+
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="datePublished">Date Published (or accessed)</label>
@@ -75,9 +80,10 @@
       </form>
       <br>
       <div id="completeCitation">
+        <span id="sectionOne"></span><span id="sectionTwo"></span><span id="sectionThree"></span>
       </div>
       <script src="app.js"></script>
     </div>
-    
+
   </body>
 </html>

@@ -1,11 +1,14 @@
-"use strict";
+// "use strict";
 
 var main = function() {
+
+  // getElementByID helper function
   var getIdVal = function(idName) {
     var val = document.getElementById(idName).value;
     return val;
   }
 
+  // Snag all form values
   var firstName = getIdVal("firstName");
   var middleInitial = getIdVal("middleInitial");
   var lastName = getIdVal("lastName");
@@ -16,19 +19,19 @@ var main = function() {
   var publisherState = getIdVal("publisherState");
   var publisherYear = getIdVal("publisherYear");
   var datePublished = getIdVal("datePublished");
-  var emphasisElement = document.createElement("EM");
-  var textNode = document.createTextNode(publisherName);
-  var emphasizedPublisherName = emphasisElement.appendChild(textNode);
-  console.log("This is the emphasiszedPublisherName" + emphasizedPublisherName);
 
-  var citation = lastName + ", " + firstName[0] + ". " + middleInitial[0] + ". (" + publisherYear + "). " + articleName + ". " + "<em>" + publisherName + "</em>" + ". Retrieved from " + url;
+  // Create text blobs
+  var sectionOneText = lastName + ", " + firstName[0] + ". " + middleInitial[0] + ". (" + publisherYear + "). " + articleName + ". ";
+  var sectionTwoText = publisherName;
+  var sectionThreeText = ". Retrieved from " + url;
 
+  // Create textNodes
+  var sectionOneTextNode = document.createTextNode(sectionOneText);
+  var sectionTwoTextNode = document.createTextNode(sectionTwoText);
+  var sectionThreeTextNode = document.createTextNode(sectionThreeText);
 
-  var completeCitation = document.getElementById("completeCitation");
-  console.log("This is the completeCitation: " + completeCitation);
-  var content = document.createTextNode(citation);
-  completeCitation.append(content);
-
-  console.log(citation);
-  
+  // Append text nodes to DOM
+  document.getElementById("sectionOne").append(sectionOneTextNode);
+  document.getElementById("sectionTwo").append(sectionTwoTextNode);
+  document.getElementById("sectionThree").append(sectionThreeTextNode);
 }
